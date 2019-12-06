@@ -13,8 +13,8 @@ var index = (function () {
         cantidadElefantes++;
     }
 
-    function primerosElefantes() {
-        while (cantidadElefantes < 100) {
+    function llamarBochaDeElefantes() {
+        for (var i = 0; i < 100; i++) {
             llamarOtroElefante();
         }
     }
@@ -22,13 +22,13 @@ var index = (function () {
     function initScroll() {
         $(window).scroll(function () {
             if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                llamarOtroElefante();
+                llamarBochaDeElefantes();
             }
         });
     }
 
     function init() {
-        primerosElefantes();
+        llamarBochaDeElefantes();
         initScroll();
     }
 
